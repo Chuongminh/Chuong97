@@ -214,33 +214,22 @@ int _tmain(int argc, _TCHAR* argv[])
 using namespace std;
 
 
-void Tong_UocSo(int a)
-{
-	int S =0;
-	for (int i=1; i<= a; i++)
-	{
-		if(a % i == 0)
-		{
-			if(i !=a)
-			{
-				cout << i << " + ";
-			}
-			else
-			{
-				cout << i << " ";
-			}
-			S = S + i;
-		}
-	}
-	cout << "= " << S << endl;
-}
-
 int _tmain(int argc, _TCHAR* argv[])
 {
 	int n;
 	cout <<"Nhap gia tri n : " << endl;
 	cin >> n;
-	Tong_UocSo(n);
+	int temp=0;
+	while(n!=0)
+	{
+		temp =temp*10 + n%10;
+		n =n/10;
+	}
+while(temp!=0)
+{
+	cout << temp%10 << "\t";
+	temp=temp /10;
+}
 	system("pause");
 	return 0;
 }
